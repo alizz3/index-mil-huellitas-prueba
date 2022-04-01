@@ -32,6 +32,7 @@ nav {
     background-image: url(../img/header-backgrond.png);
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 main {
@@ -39,7 +40,7 @@ main {
 }
 
 
-        /*Estilos heder*/
+/*Estilos heder*/
 .logo-text-heder {
     display: flex;
     align-items: center;
@@ -112,7 +113,7 @@ main {
 }
 
 
-        /*estilos banner*/
+/*estilos banner*/
 #index-banner-pc {
     display: none;
 }
@@ -193,6 +194,11 @@ main {
 
 .indexBtn1 img {
     width: 70%;
+    position: relative;
+}
+.indexhoverBtn1 img {
+    width: 70%;
+    position: absolute;
 }
 
 .indexBtn2 img {
@@ -216,7 +222,11 @@ main {
     margin-top: 2%;
 }
 
-
+.indexBtn1 img.active,
+.indexBtn1 img:hover {
+    border: 2px solid red;
+    
+}
 
 
 
@@ -234,7 +244,7 @@ main {
 
 
 
-        /*responsive navbar*/
+    /*responsive navbar*/
     .logo-nav {
         width: 35%;
         margin-left: 20px;
@@ -244,8 +254,8 @@ main {
         margin-right: 20px;
     }
 
-    
-        /*responsive banner*/
+
+    /*responsive banner*/
     #index-banner-pc {
         display: initial;
     }
@@ -255,7 +265,7 @@ main {
     }
 
 
-        /* responsive botones index*/
+    /* responsive botones index*/
     #index-btns {
         display: none;
     }
@@ -293,8 +303,8 @@ main {
     }
 
 
-    
-    .indexbtn-pc-1 img {
+
+    .indexBtn-pc-1 img {
         width: 90%;
     }
 
@@ -326,14 +336,14 @@ main {
 /*responsive desktop*/
 
 @media screen and (min-width: 950px) {
-        
+
     /*responsive Pc navbar*/
     nav {
         height: 100px;
         flex-direction: row;
 
     }
-    
+
     .logo-nav {
         margin-left: 50px;
     }
