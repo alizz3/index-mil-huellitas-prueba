@@ -87,8 +87,9 @@ main{
 }
 
 .nav-menu li a.active, .nav-menu li a:hover{
-    color: rgb(0, 255, 0);
+    color: #09ff00;
     transition: .3s;
+    text-shadow: 1px 1px 10px #09ff00;
 }
 
 #check{
@@ -232,6 +233,7 @@ main{
         text-align: center;
         font-weight: 500;
         grid-area: titulo;
+        margin-top: 2%;
     }
 
 }
