@@ -6,6 +6,8 @@
     --white-color: #ffff;
     --aleo-font: "Aleo", serif;
     --poppins-font: "Poppins", sans-serif;
+    --Degrade-nav-menu-color:linear-gradient(180deg, rgba(7, 36, 62, 0.9) 32.33%, rgba(42, 95, 145, 0.9) 92.71%);
+
 }
 
 * {
@@ -19,26 +21,38 @@
 
 header{
     width: 100%;
-    height: 100vh;
-
 }
 
 nav{
     height: 100px;
     width: 100%;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     background-image: url(../img/header-backgrond.png);
 }
-.logo{
-    width: 70px;
-    margin-left: 20px;
+
+.logo-text-heder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-nav{
+    width: 35%;
+    margin-right: 20px;
+}
+.text-logo-heder{
+    font-family: var(--aleo-font);
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
 .bar-btn{
     font-size: 25px;
-    color: #fff;
-    margin-right: 20px;
+    color: var(--white-color);    
+    margin-left: 20px;
     cursor: pointer;
 }
 .nav-menu{
@@ -46,8 +60,8 @@ nav{
     width: 100%;
     height: 0vh;
     top: 100px;
-    background: rgba(3, 3, 3, 0.616);
-    background-position: center;
+    background: var(--Degrade-nav-menu-color);
+    backdrop-filter: blur(5px);
     background-repeat: no-repeat;
     text-align: center;
     transition: all .5s;
@@ -55,13 +69,13 @@ nav{
 
 .nav-menu li{
     display: none;
-    line-height: 30px;
+    line-height: 3rem;
     margin: 50px 0;
     transition: all .5s;
 }
 
 .nav-menu li a{
-    color: #fff;
+    color: var(--white-color);
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
@@ -85,14 +99,52 @@ nav{
 }
 
 
+#index-banner-pc{
+    display: none;
+}
+
+#index-banner{
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    width: 100;
+    overflow: auto;
+    animation: index-bannerr 1s linear 1s infinite alternate-reverse;
+}
+
+.index-img-banner{
+    width: 100%;
+}
+
+@keyframes index-banner {
+    from{margin-left: -500px;}
+    to{margin-left: 0px;}
+}
+
+.index-tittles{
+    color: #2970CA;
+    text-align: center;
+    font-weight: 500;
+}
+
+/*botones index*/
+#index-pc-btns{
+    display: none;
+}
+
+
+
+
+
 /*responsive desktop*/
 @media screen and (min-width: 768px){
-    .logo{
+    .logo-nav{
         margin-left: 50px;
     }    
 
     nav{
         height: 100px;
+        flex-direction: row;
+
     }
 
     .bar-btn{
@@ -106,7 +158,7 @@ nav{
         background: none;
         transition: none;
         text-align: right;
-        margin-right: 50px;
+        margin-right: 1rem;
     }
 
     .nav-menu li{
@@ -121,5 +173,62 @@ nav{
         font-size: 12px;
     }
 
+    #index-banner{
+        display: none;
+    }
+
+    #index-banner-pc{
+        display: initial ;
+    }
+    .index-img-banner-pc{
+        width: 100%;    
+    }
+
+
+
+    /*botones index*/
+    #index-btns{
+        display: none;
+    }
+    #index-pc-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            'titulo titulo'
+            'btn1 btn2'
+            'btn3 btn4';
+    }
+
+    .indexBtn1{
+        grid-area: btn1;
+        text-align: right;
+    }
+
+    .indexBtn2{
+        grid-area: btn2;
+        text-align: left;
+
+    }
+
+    .indexBtn3{
+        grid-area: btn3;
+        text-align: right;
+
+    }
+
+    .indexBtn4{
+        grid-area: btn4;
+        text-align: left;
+
+    }
+    
+    .index-tittles-btn{
+        color: #2970CA;
+        text-align: center;
+        font-weight: 500;
+        grid-area: titulo;
+        margin-bottom: -100px;
+    }
 
 }
