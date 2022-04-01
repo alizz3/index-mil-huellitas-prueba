@@ -31,8 +31,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-image: url(../img/header-backgrond.png);
+    position: fixed;
+    top: 0;
 }
 
+main{
+    margin-top: 100px;
+}
 .logo-text-heder{
     display: flex;
     align-items: center;
@@ -135,42 +140,18 @@ nav{
 
 
 
-/*responsive desktop*/
-@media screen and (min-width: 768px){
-    .logo-nav{
-        margin-left: 50px;
-    }    
+/**/
 
+
+
+
+
+
+/*responsive tablets*/
+@media screen and (min-width: 870px){
+    
     nav{
-        height: 100px;
         flex-direction: row;
-
-    }
-
-    .bar-btn{
-        display: none;
-    }
-
-    .nav-menu{
-        position: relative;
-        height: 100px;
-        top: 0;
-        background: none;
-        transition: none;
-        text-align: right;
-        margin-right: 1rem;
-    }
-
-    .nav-menu li{
-        display: inline-block;
-        line-height: 100px;
-        margin: 0 20px;
-        transition: none;
-
-    }
-
-    .nav-menu li a{
-        font-size: 12px;
     }
 
     #index-banner{
@@ -183,7 +164,13 @@ nav{
     .index-img-banner-pc{
         width: 100%;    
     }
-
+    .logo-nav{
+        width: 35%;
+        margin-left: 20px;
+    }
+    .bar-btn{
+        margin-right: 20px;
+    }
 
 
     /*botones index*/
@@ -191,6 +178,7 @@ nav{
         display: none;
     }
     #index-pc-btns{
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
@@ -219,15 +207,75 @@ nav{
     .indexBtn4{
         grid-area: btn4;
         text-align: left;
-
     }
     
+
+    
+
+
+
+    .indexBtn1 img{
+        width: 90%;
+    }
+    .indexBtn2 img{
+        width: 90%;
+    }
+    .indexBtn3 img{
+        width: 90%;
+    }
+    .indexBtn4 img{
+        width: 90%;
+    }
+
     .index-tittles-btn{
         color: #2970CA;
         text-align: center;
         font-weight: 500;
         grid-area: titulo;
-        margin-bottom: -100px;
     }
 
+}
+
+
+
+
+/*responsive desktop*/
+
+@media screen and (min-width: 950px) {
+    .logo-nav{
+        margin-left: 50px;
+    }    
+
+    nav{
+        height: 100px;
+        flex-direction: row;
+
+    }
+
+    .bar-btn{
+        display: none;
+    }
+
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 1rem;
+        backdrop-filter: blur(0px);
+    }
+
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+
+    }
+
+    .nav-menu li a{
+        font-size: 1rem;
+    }
 }
