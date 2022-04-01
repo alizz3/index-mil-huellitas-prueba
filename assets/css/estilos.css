@@ -6,7 +6,7 @@
     --white-color: #ffff;
     --aleo-font: "Aleo", serif;
     --poppins-font: "Poppins", sans-serif;
-    --Degrade-nav-menu-color:linear-gradient(180deg, rgba(7, 36, 62, 0.9) 32.33%, rgba(42, 95, 145, 0.9) 92.71%);
+    --Degrade-nav-menu-color: linear-gradient(180deg, rgba(7, 36, 62, 0.9) 32.33%, rgba(42, 95, 145, 0.9) 92.71%);
 
 }
 
@@ -18,12 +18,11 @@
     font-family: var(--poppins-font);
 }
 
-
-header{
+header {
     width: 100%;
 }
 
-nav{
+nav {
     height: 100px;
     width: 100%;
     display: flex;
@@ -35,32 +34,39 @@ nav{
     top: 0;
 }
 
-main{
+main {
     margin-top: 100px;
 }
-.logo-text-heder{
+
+
+        /*Estilos heder*/
+.logo-text-heder {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.logo-nav{
+
+.logo-nav {
     width: 35%;
     margin-right: 20px;
 }
-.text-logo-heder{
+
+.text-logo-heder {
     font-family: var(--aleo-font);
     color: var(--white-color);
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
-.bar-btn{
+
+.bar-btn {
     font-size: 25px;
-    color: var(--white-color);    
+    color: var(--white-color);
     margin-left: 20px;
     cursor: pointer;
 }
-.nav-menu{
+
+.nav-menu {
     position: fixed;
     width: 100%;
     height: 0vh;
@@ -72,44 +78,46 @@ main{
     transition: all .5s;
 }
 
-.nav-menu li{
+.nav-menu li {
     display: none;
     line-height: 3rem;
     margin: 50px 0;
     transition: all .5s;
 }
 
-.nav-menu li a{
+.nav-menu li a {
     color: var(--white-color);
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.nav-menu li a.active, .nav-menu li a:hover{
+.nav-menu li a.active,
+.nav-menu li a:hover {
     color: #09ff00;
     transition: .3s;
     text-shadow: 1px 1px 10px #09ff00;
 }
 
-#check{
+#check {
     display: none;
 }
 
-#check:checked ~ .nav-menu{
+#check:checked~.nav-menu {
     height: 100vh;
 }
 
-#check:checked ~ .nav-menu li{
+#check:checked~.nav-menu li {
     display: block;
 }
 
 
-#index-banner-pc{
+        /*estilos banner*/
+#index-banner-pc {
     display: none;
 }
 
-#index-banner{
+#index-banner {
     display: grid;
     grid-template-columns: 100% 100% 100%;
     width: 100;
@@ -117,31 +125,96 @@ main{
     animation: index-bannerr 1s linear 1s infinite alternate-reverse;
 }
 
-.index-img-banner{
+.index-img-banner {
     width: 100%;
 }
 
 @keyframes index-banner {
-    from{margin-left: -500px;}
-    to{margin-left: 0px;}
+    from {
+        margin-left: -500px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
 }
 
-.index-tittles{
+
+
+/*Titulos index*/
+.index-tittles {
     color: #2970CA;
     text-align: center;
     font-weight: 500;
 }
 
+
 /*botones index*/
-#index-pc-btns{
+#index-pc-btns {
     display: none;
 }
 
 
 
+#index-btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        'titulo titulo'
+        'btn1 btn2'
+        'btn3 btn4';
+    column-gap: 3%;
+}
+
+.indexBtn1 {
+    grid-area: btn1;
+    text-align: right;
+}
+
+.indexBtn2 {
+    grid-area: btn2;
+    text-align: left;
+
+}
+
+.indexBtn3 {
+    grid-area: btn3;
+    text-align: right;
+}
+
+.indexBtn4 {
+    grid-area: btn4;
+    text-align: left;
+}
 
 
-/**/
+
+.indexBtn1 img {
+    width: 70%;
+}
+
+.indexBtn2 img {
+    width: 70%;
+}
+
+.indexBtn3 img {
+    width: 70%;
+}
+
+.indexBtn4 img {
+    width: 70%;
+}
+
+.index-tittles-btn {
+    color: #2970CA;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    grid-area: titulo;
+    margin-top: 2%;
+}
 
 
 
@@ -149,86 +222,95 @@ main{
 
 
 /*responsive tablets*/
-@media screen and (min-width: 870px){
-    
-    nav{
+@media screen and (min-width: 870px) {
+
+    nav {
         flex-direction: row;
     }
 
-    #index-banner{
+    #index-banner {
         display: none;
     }
 
-    #index-banner-pc{
-        display: initial ;
-    }
-    .index-img-banner-pc{
-        width: 100%;    
-    }
-    .logo-nav{
+
+
+        /*responsive navbar*/
+    .logo-nav {
         width: 35%;
         margin-left: 20px;
     }
-    .bar-btn{
+
+    .bar-btn {
         margin-right: 20px;
     }
 
+    
+        /*responsive banner*/
+    #index-banner-pc {
+        display: initial;
+    }
 
-    /*botones index*/
-    #index-btns{
+    .index-img-banner-pc {
+        width: 100%;
+    }
+
+
+        /* responsive botones index*/
+    #index-btns {
         display: none;
     }
-    #index-pc-btns{
+
+    #index-pc-btns {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
-        grid-template-areas: 
+        grid-template-areas:
             'titulo titulo'
-            'btn1 btn2'
-            'btn3 btn4';
+            'btn-pc-1 btn-pc-2'
+            'btn-pc-3 btn-pc-4';
     }
 
-    .indexBtn1{
-        grid-area: btn1;
+    .indexBtn-pc-1 {
+        grid-area: btn-pc-1;
         text-align: right;
     }
 
-    .indexBtn2{
-        grid-area: btn2;
+    .indexBtn-pc-2 {
+        grid-area: btn-pc-2;
         text-align: left;
 
     }
 
-    .indexBtn3{
-        grid-area: btn3;
+    .indexBtn-pc-3 {
+        grid-area: btn-pc-3;
         text-align: right;
     }
 
-    .indexBtn4{
-        grid-area: btn4;
+    .indexBtn-pc-4 {
+        grid-area: btn-pc-4;
         text-align: left;
     }
+
+
     
-
-    
-
-
-
-    .indexBtn1 img{
-        width: 90%;
-    }
-    .indexBtn2 img{
-        width: 90%;
-    }
-    .indexBtn3 img{
-        width: 90%;
-    }
-    .indexBtn4 img{
+    .indexbtn-pc-1 img {
         width: 90%;
     }
 
-    .index-tittles-btn{
+    .indexBtn-pc-2 img {
+        width: 90%;
+    }
+
+    .indexBtn-pc-3 img {
+        width: 90%;
+    }
+
+    .indexBtn-pc-4 img {
+        width: 90%;
+    }
+
+    .index-tittles-pc-btn {
         color: #2970CA;
         text-align: center;
         font-weight: 500;
@@ -244,21 +326,23 @@ main{
 /*responsive desktop*/
 
 @media screen and (min-width: 950px) {
-    .logo-nav{
-        margin-left: 50px;
-    }    
-
-    nav{
+        
+    /*responsive Pc navbar*/
+    nav {
         height: 100px;
         flex-direction: row;
 
     }
+    
+    .logo-nav {
+        margin-left: 50px;
+    }
 
-    .bar-btn{
+    .bar-btn {
         display: none;
     }
 
-    .nav-menu{
+    .nav-menu {
         position: relative;
         height: 100px;
         top: 0;
@@ -269,7 +353,7 @@ main{
         backdrop-filter: blur(0px);
     }
 
-    .nav-menu li{
+    .nav-menu li {
         display: inline-block;
         line-height: 100px;
         margin: 0 20px;
@@ -277,7 +361,7 @@ main{
 
     }
 
-    .nav-menu li a{
+    .nav-menu li a {
         font-size: 1rem;
     }
 }
