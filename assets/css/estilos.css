@@ -118,36 +118,65 @@ main {
     display: none;
 }
 
-#index-banner {
+
+/*#index-banner{
     display: grid;
     grid-template-columns: 100% 100% 100%;
-    width: 100;
+
     overflow: auto;
     animation: index-bannerr 1s linear 1s infinite alternate-reverse;
 }
 
-.index-img-banner {
+index-img-banner{
+    width: 100vh;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 95%;
+    background-color: rgba(255, 0, 0, 0);  
+    overflow: auto;
+    
+}
+
+.slider-ul{
+    list-style: none;
+    width: 100%;
+    overflow: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+
+    animation: mover-slide 10s linear 1s infinite alternate-reverse;
+}*/
+
+
+.slider-li-1 img{
+    width: 100%;
+}
+.slider-li-2 img{
+    width: 100%;
+}
+.slider-li-3 img{
     width: 100%;
 }
 
-@keyframes index-banner {
-    from {
-        margin-left: -500px;
-    }
-
-    to {
-        margin-left: 0px;
-    }
-}
+.slider-ul
 
 
 
 /*Titulos index*/
+
 .index-tittles {
     color: #2970CA;
     text-align: center;
     font-weight: 500;
 }
+
+
+
+
 
 
 /*botones index*/
@@ -227,6 +256,33 @@ main {
     border: 2px solid red;
     
 }
+
+
+
+
+/*Nuestro equipo*/
+
+.index-nuestro-equipo-img-1{
+    width: 40%;
+
+}
+
+.index-nuestro-equipo-img-2{
+    width: 40%;
+}
+
+.index-nuestro-equipo-img-3{
+    width: 40%;
+}
+
+.index-nuestro-equipo-img-4{
+    width: 40%;
+}
+
+.index-nuestro-equipo-img-5{
+    width: 40%;
+}
+
 
 
 
